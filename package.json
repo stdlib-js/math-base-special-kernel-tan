@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-special-kernel-tan",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Compute the tangent of a number on `[-π/4, π/4]`.",
   "license": "Apache-2.0",
   "author": {
