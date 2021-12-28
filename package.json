@@ -42,7 +42,7 @@
     "@stdlib/number-float64-base-set-low-word": "^0.0.x"
   },
   "devDependencies": {
-    "@stdlib/array-linspace": "^0.0.x",
+    "@stdlib/array-base-linspace": "^0.0.x",
     "@stdlib/bench": "^0.0.x",
     "@stdlib/constants-float64-pi": "^0.0.x",
     "@stdlib/fs-write-file": "^0.0.x",
