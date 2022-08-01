@@ -24,14 +24,30 @@ limitations under the License.
 
 > Compute the [tangent][tangent] of a number on `[-π/4, π/4]`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-kernel-tan
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import kernelTan from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-tan@esm/index.mjs';
+var kernelTan = require( '@stdlib/math-base-special-kernel-tan' );
 ```
 
 #### kernelTan( x, y, k )
@@ -100,16 +116,11 @@ out = kernelTan( NaN, NaN, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@esm/index.mjs';
-var binomial = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-binomial' ).factory;
-import PI from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-pi@esm/index.mjs';
-import kernelTan from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-tan@esm/index.mjs';
+```javascript
+var linspace = require( '@stdlib/array-base-linspace' );
+var binomial = require( '@stdlib/random-base-binomial' ).factory;
+var PI = require( '@stdlib/constants-float64-pi' );
+var kernelTan = require( '@stdlib/math-base-special-kernel-tan' );
 
 var x = linspace( -PI/4.0, PI/4.0, 100 );
 var rbinom = binomial( 1, 0.5 );
@@ -123,10 +134,6 @@ for ( i = 0; i < x.length; i++ ) {
     descr = ( k === 1 ) ? 'tan(%d) = %d' : '-1/tan(%d) = %d';
     console.log( descr, x[ i ], kernelTan( x[ i ], 0.0, k ) );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -158,7 +165,7 @@ for ( i = 0; i < x.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -221,11 +228,11 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/kernel-cos]: https://github.com/stdlib-js/math-base-special-kernel-cos/tree/esm
+[@stdlib/math/base/special/kernel-cos]: https://github.com/stdlib-js/math-base-special-kernel-cos
 
-[@stdlib/math/base/special/kernel-sin]: https://github.com/stdlib-js/math-base-special-kernel-sin/tree/esm
+[@stdlib/math/base/special/kernel-sin]: https://github.com/stdlib-js/math-base-special-kernel-sin
 
-[@stdlib/math/base/special/tan]: https://github.com/stdlib-js/math-base-special-tan/tree/esm
+[@stdlib/math/base/special/tan]: https://github.com/stdlib-js/math-base-special-tan
 
 <!-- </related-links> -->
 
