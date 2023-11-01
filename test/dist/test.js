@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,93 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var isnan = require( '@stdlib/math-base-assert-is-nan' );
-var linspace = require( '@stdlib/array-base-linspace' );
-var rempio2 = require( '@stdlib/math-base-special-rempio2' );
-var PI = require( '@stdlib/constants-float64-pi' );
-var tan = require( '@stdlib/math-base-special-tan' );
-var kernelTan = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof kernelTan, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns `NaN` if provided `NaN` for `x` or `y`', function test( t ) {
-	var v = kernelTan( NaN, 0.0, 1.0 );
-	t.equal( isnan( v ), true, 'returns NaN' );
-
-	v = kernelTan( 4.0, NaN, 1.0 );
-	t.equal( isnan( v ), true, 'returns NaN' );
-
-	v = kernelTan( NaN, NaN, 1.0 );
-	t.equal( isnan( v ), true, 'returns NaN' );
-
-	v = kernelTan( NaN, 0.0, -1.0 );
-	t.equal( isnan( v ), true, 'returns NaN' );
-
-	v = kernelTan( 4.0, NaN, -1.0 );
-	t.equal( isnan( v ), true, 'returns NaN' );
-
-	v = kernelTan( NaN, NaN, -1.0 );
-	t.equal( isnan( v ), true, 'returns NaN' );
-
-	t.end();
-});
-
-tape( 'the function evaluates the tangent for input values inside of `[-pi/4, pi/4]`', function test( t ) {
-	var values;
-	var out;
-	var x;
-	var i;
-
-	values = linspace( -PI/4.0, PI/4.0, 1000 );
-	for ( i = 0; i < values.length; i++ ) {
-		x = values[ i ];
-		out = kernelTan( x, 0.0, 1 );
-		t.strictEqual( out, tan( x ), 'returns expected value' );
-	}
-	t.end();
-});
-
-tape( 'the function can be used to compute the tangent for input values outside of `[-pi/4, pi/4]` after argument reduction via `rempio2` (positive)', function test( t ) {
-	var values;
-	var out;
-	var x;
-	var y;
-	var n;
-	var i;
-
-	values = linspace( 40.0*PI/4.0, 200*PI/4.0, 1000 );
-	y = [ 0.0, 0.0 ];
-	for ( i = 0; i < values.length; i++ ) {
-		x = values[ i ];
-		n = rempio2( x, y );
-		out = kernelTan( y[ 0 ], y[ 1 ], 1 - ( (n&1)<<1 ) );
-		t.strictEqual( out, tan( x ), 'returns expected value' );
-	}
-	t.end();
-});
-
-tape( 'the function can be used to compute the tangent for input values outside of `[-pi/4, pi/4]` after argument reduction via `rempio2` (negative)', function test( t ) {
-	var values;
-	var out;
-	var x;
-	var y;
-	var n;
-	var i;
-
-	values = linspace( -200.0*PI/4.0, -40.0*PI/4.0, 1000 );
-	y = [ 0.0, 0.0 ];
-	for ( i = 0; i < values.length; i++ ) {
-		x = values[ i ];
-		n = rempio2( x, y );
-		out = kernelTan( y[ 0 ], y[ 1 ], 1 - ( (n&1)<<1 ) );
-		t.strictEqual( out, tan( x ), 'returns expected value' );
-	}
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
