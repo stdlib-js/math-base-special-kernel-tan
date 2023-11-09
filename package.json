@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@stdlib/array-base-linspace": "^0.1.0",
-    "@stdlib/bench": "^0.1.0",
+    "@stdlib/bench": "^0.2.0",
     "@stdlib/constants-float64-pi": "^0.1.1",
     "@stdlib/fs-read-file": "^0.1.1",
     "@stdlib/fs-write-file": "^0.1.1",
