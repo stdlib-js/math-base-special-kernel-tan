@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-special-kernel-tan",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Compute the tangent of a double-precision floating-point number on [-π/4, π/4].",
   "license": "Apache-2.0",
   "author": {
