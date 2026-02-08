@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import kernelTan from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-tan@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-kernel-tan/tags). For example,
+
+```javascript
 import kernelTan from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-tan@v0.2.4-esm/index.mjs';
 ```
 
@@ -122,7 +127,7 @@ out = kernelTan( NaN, NaN, 1 );
 import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@esm/index.mjs';
 var binomial = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-binomial' ).factory;
 import PI from 'https://cdn.jsdelivr.net/gh/stdlib-js/constants-float64-pi@esm/index.mjs';
-import kernelTan from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-tan@v0.2.4-esm/index.mjs';
+import kernelTan from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-kernel-tan@esm/index.mjs';
 
 var x = linspace( -PI/4.0, PI/4.0, 100 );
 var rbinom = binomial( 1, 0.5 );
