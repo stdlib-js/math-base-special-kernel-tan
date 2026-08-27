@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-07-25)
+## Unreleased (2026-08-27)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`d5da0cb`](https://github.com/stdlib-js/stdlib/commit/d5da0cbb9558361e16b90a5351c04bf4cdc917f7) - **docs:** add introductory text to READMEs [(#14697)](https://github.com/stdlib-js/stdlib/pull/14697) _(by Karan Anand)_
 -   [`7ba59e3`](https://github.com/stdlib-js/stdlib/commit/7ba59e3216337f690325156dd4cc925902d7dea3) - **test:** migrate `math/base/special/kernel-tan` to ULP-based testing [(#12804)](https://github.com/stdlib-js/stdlib/pull/12804) _(by Philipp Burckhardt)_
 -   [`59c9969`](https://github.com/stdlib-js/stdlib/commit/59c9969a580e74428505ba91634607f110ec71bf) - **bench:** refactor to use string interpolation in `math/base/special` [(#11388)](https://github.com/stdlib-js/stdlib/pull/11388) _(by Karan Anand)_
 
